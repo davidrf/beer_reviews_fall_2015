@@ -1,0 +1,13 @@
+<h1><%= beer["name"] %></h1>
+<ul>
+  <% reviews.each do |review| %>
+    <li>
+      <%= review["body"] %>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/beers/<%= beer["id"] %>/reviews" method="post">
+  <input type="text" name="body"/>
+  <input type="submit"/>
+</form>
